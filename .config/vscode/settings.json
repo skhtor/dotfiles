@@ -1,0 +1,46 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "files.autoSave": "afterDelay",
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+    "redhat.telemetry.enabled": true,
+    "workbench.startupEditor": "none",
+    "editor.tabSize": 2,
+    "yaml.customTags": [
+        "!Add",
+        "!Not",
+        "!Equals",
+        "!Condition",
+        "!Ref",
+        "!Sub",
+        "!If",
+        "!GetAtt",
+        "!Select",
+        "!Split"
+    ],
+    "gitlens.codeLens.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "[terraform]": {
+    },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "files.associations": {
+        "*.sh": "shellscript",
+        "*.tf": "tf"
+    },
+    "editor.smoothScrolling": true,
+    "tabnine.experimentalAutoImports": true,
+    "editor.minimap.enabled": false,
+    "github.copilot.advanced": {
+      "debug.overrideEngine": "codellama-7b.ggmlv3.Q2_K.bin",
+      "debug.testOverrideProxyUrl": "http://localhost:9999",
+      "debug.overrideProxyUrl": "http://localhost:9999"
+    }
+}

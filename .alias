@@ -1,0 +1,52 @@
+# nvim
+alias v='nvim'
+alias vim='nvim'
+alias v.='v .'
+
+# fzf aliases
+# use fp to do a fzf search and preview the files
+alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+# search for a file with fzf and open it in vim
+alias vf='v $(fp)'
+
+# Easy navigation
+alias cd..="cd .."
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .4="cd ../../../.."
+
+# Command shortening
+alias la="ls -lAh"  # ls in a list including hidden files
+alias l.="ls -d .*"  # show hidden files/directories
+alias mkdir="mkdir -p"  # create parent directories by default
+
+alias g="git"
+alias f="fuck"
+
+# Docker
+alias docker_stop_containers='docker stop $(docker ps -a -q)'
+alias docker_clean_images='docker rmi -f $(docker images -q)'
+alias docker_clean_volumes='docker volume rm $(docker volume ls -qf dangling=true)'
+alias docker_clean_containers='docker rm $(docker ps -qa --no-trunc --filter "status=exited")'
+
+# Set python to version 3 by default
+alias pip="/usr/local/bin/pip3"
+alias python="/usr/local/bin/python3"
+
+alias pip_uninstall_all='pip freeze | xargs pip uninstall -y'
+alias pip_upgrade_all='pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
+
+# SSM
+alias ssm='aws ssm start-session --target'
+
+#### AWS ADFS
+
+# Kubectl
+alias k="kubectl"
+alias kdash="kubectl -n addons describe secret \$(kubectl -n addons get secret | awk '/^admin-user-/{print \$1}') | awk '\$1==\"token:\"{print \$2}'"
+
+# Update Kubeconfig
+function kc {
+  aws eks update-kubeconfig --name $1
+}

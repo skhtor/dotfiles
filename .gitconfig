@@ -1,0 +1,70 @@
+[user]
+    name = Sassoon Kuyumcian
+    email = sass.kumuycian@tabcorp.com.au
+[core]
+    editor = nvim
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile = ~/.gitignore
+[web]
+    browser = arc
+[bash]
+    showDirtyState = true
+[color]
+    ui = auto
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[alias]
+    aa = add --all
+    ap = add -p
+    br = branch
+    ba = branch -a
+    bd = branch -D
+    ci = commit
+    cm = commit -m
+    cv = commit -v
+    co = checkout
+    cb = checkout -b
+    ct = checkout --track
+    cl = clone
+    cp = cherrypick
+    cpx = cherrypick -x
+    df = diff
+    dc = diff --cached
+    fe = fetch
+    last = log -1 HEAD
+    mr = merge
+    poh = push -u origin HEAD
+    puh = push upstream HEAD
+    pot = push origin --tags
+    pum = pull upstream master
+    rs = remote show
+    ss = stash
+    su = stash -u
+    sl = stash list
+    spop = stash pop
+    st = status
+    subu = submodule update --remote --merge --init --recursive
+    unci = reset HEAD~
+    unstage = reset HEAD --
+[pull]
+    rebase = false
+[diff "sopsdiffer"]
+    textconv = sops -d
+[pull]
+    rebase = false

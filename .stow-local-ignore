@@ -1,0 +1,33 @@
+# Comments and blank lines are allowed.
+
+RCS
+.+,v
+
+CVS
+\.\#.+       # CVS conflict files / emacs lock files
+\.cvsignore
+
+\.svn
+_darcs
+\.hg
+
+\.git
+\.git
+\.gitignore
+
+\.DS_Store
+
+\
+
+.+~          # emacs backup files
+\#.*\#       # emacs autosave files
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+^\.tmp.*
+
+^/Brewfile
+^/Brewfile.lock.json
+^/install_brew\.sh

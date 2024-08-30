@@ -1,0 +1,16 @@
+1password
+appcleaner
+arc
+bluesnooze
+discord
+firefox
+google-chrome
+iterm2
+messenger
+spectacle
+spotify
+steam
+teamviewer
+visual-studio-code
+vlc
+whatsapp
