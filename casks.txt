@@ -11,6 +11,7 @@ spectacle
 spotify
 steam
 teamviewer
+tidal
 visual-studio-code
 vlc
 whatsapp
