@@ -8,27 +8,34 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
+  outputs = inputs@{ self, nixpkgs, nix-darwin, nix-homebrew }:
   let
     configuration = { pkgs, config, ... }: {
       nixpkgs.config.allowUnfree = true;
 
       # List packages installed in system profile
       environment.systemPackages = [
+        pkgs._1password-cli
+        pkgs.appcleaner
         pkgs.arc-browser
         pkgs.argocd
         pkgs.docker
         pkgs.fzf
         pkgs.gh
         pkgs.git
+        pkgs.google-chrome
+        pkgs.kubernetes-helm
         pkgs.helmfile
+        pkgs.iterm2
         pkgs.jq
         pkgs.k9s
         pkgs.kubectl
         pkgs.mkalias
         pkgs.neovim
+        pkgs.obsidian
         pkgs.ripgrep
         pkgs.sops
+        pkgs.spotify
         pkgs.stow
         pkgs.tldr
         pkgs.tmux
@@ -37,6 +44,26 @@
         pkgs.zoxide
         pkgs.zsh-syntax-highlighting
       ];
+
+      homebrew = {
+        enable = true;
+        brews = [
+          "mas"
+        ];
+        casks = [
+          "1password"
+          "balenaetcher"
+          "discord"
+          "obsidian"
+          "zen-browser"
+        ];
+        masApps = {
+          "Yoink" = 457622435;
+        };
+        onActivation.cleanup = "zap";
+        onActivation.autoUpdate = true;
+        onActivation.upgrade = true;
+      };
 
       fonts.packages = [
         pkgs.nerd-fonts.jetbrains-mono
@@ -60,7 +87,30 @@
           echo "copying $src" >&2
           ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
         done
-      '';
+        '';
+
+      system.defaults = {
+        dock.autohide = true;
+        dock.mru-spaces = false;
+        dock.persistent-apps = [
+          "${pkgs.arc-browser}/Applications/Arc.app"
+          "/Applications/Zen Browser.app"
+          "${pkgs.spotify}/Applications/Spotify.app"
+          "${pkgs.iterm2}/Applications/iTerm2.app"
+          "${pkgs.obsidian}/Applications/Obsidian.app"
+          "/System/Applications/Calendar.app"
+          "/System/Applications/App Store.app"
+          "/System/Applications/System Settings.app"
+        ];
+        finder.AppleShowAllExtensions = true;
+        finder.FXPreferredViewStyle = "clmv";
+        loginwindow.GuestEnabled = false;
+        NSGlobalDomain.AppleICUForce24HourTime = true;
+        NSGlobalDomain.AppleInterfaceStyle = "Dark";
+        NSGlobalDomain.KeyRepeat = 2;
+      };
+
+      security.pam.enableSudoTouchIdAuth = true;
 
       # Auto upgrade packages and daemon service
       services.nix-daemon.enable = true;
@@ -99,9 +149,6 @@
 
             # User owning the Homebrew prefix
             user = "sassoonkuyumcian";
-
-            # Automatically migrate existing Homebrew installations
-            autoMigrate = true;
           };
         }
       ];
