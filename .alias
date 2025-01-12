@@ -48,9 +48,5 @@ alias kdash="kubectl -n addons describe secret \$(kubectl -n addons get secret |
 
 # Update Kubeconfig
 function kc {
-  aws eks update-kubeconfig --name $1-terraform-eks-cluster
+  aws eks update-kubeconfig --name $1
 }
-
-# Fuck Zscaler
-alias start-zscaler="open -a /Applications/Zscaler/Zscaler.app --hide; sudo find /Library/LaunchDaemons -name '*zscaler*' -exec launchctl load {} \;"
-alias kill-zscaler="find /Library/LaunchAgents -name '*zscaler*' -exec launchctl unload {} \;;sudo find /Library/LaunchDaemons -name '*zscaler*' -exec launchctl unload {} \;"

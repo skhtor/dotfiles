@@ -1,13 +1,6 @@
 # Setup fzf
 # ---------
-if [[ ! "$PATH" == *$(brew --prefix)/opt/fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}$(brew --prefix)/opt/fzf/bin"
+if [ -n "${commands[fzf-share]}" ]; then
+  source "$(fzf-share)/key-bindings.zsh"
+  source "$(fzf-share)/completion.zsh"
 fi
-
-# Auto-completion
-# ---------------
-source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
-
-# Key bindings
-# ------------
-source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"

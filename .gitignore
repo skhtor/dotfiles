@@ -1,2 +1,6 @@
 .secret_env
+<<<<<<< HEAD
+=======
+.secret_alias
+>>>>>>> 84414aca519e87f7c4b79c39872925003a7692ba
 .config/tmux/plugins

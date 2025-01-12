@@ -6,7 +6,7 @@
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
     excludesfile = ~/.gitignore
 [web]
-    browser = google-chrome
+    browser = arc
 [bash]
     showDirtyState = true
 [color]
@@ -66,5 +66,3 @@
     rebase = false
 [diff "sopsdiffer"]
     textconv = sops -d
-[pull]
-    rebase = false
