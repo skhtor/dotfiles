@@ -11,38 +11,40 @@
   outputs = inputs@{ self, nixpkgs, nix-darwin, nix-homebrew }:
   let
     configuration = { pkgs, config, ... }: {
-      nixpkgs.config.allowUnfree = true;
+      nixpkgs.config = {
+        allowUnfree = true;
+      };
 
       # List packages installed in system profile
-      environment.systemPackages = [
-        pkgs._1password-cli
-        pkgs.appcleaner
-        pkgs.arc-browser
-        pkgs.argocd
-        pkgs.docker
-        pkgs.fzf
-        pkgs.gh
-        pkgs.git
-        pkgs.google-chrome
-        pkgs.kubernetes-helm
-        pkgs.helmfile
-        pkgs.iterm2
-        pkgs.jq
-        pkgs.k9s
-        pkgs.kubectl
-        pkgs.mkalias
-        pkgs.neovim
-        pkgs.obsidian
-        pkgs.ripgrep
-        pkgs.sops
-        pkgs.spotify
-        pkgs.stow
-        pkgs.tldr
-        pkgs.tmux
-        pkgs.watch
-        pkgs.yamllint
-        pkgs.zoxide
-        pkgs.zsh-syntax-highlighting
+      environment.systemPackages = with pkgs; [
+        _1password-cli
+        appcleaner
+        arc-browser
+        argocd
+        docker
+        fzf
+        gh
+        git
+        google-chrome
+        helmfile
+        iterm2
+        jq
+        k9s
+        kubectl
+        kubernetes-helm
+        mkalias
+        neovim
+        obsidian
+        ripgrep
+        sops
+        spotify
+        stow
+        tldr
+        tmux
+        watch
+        yamllint
+        zoxide
+        zsh-syntax-highlighting
       ];
 
       homebrew = {
@@ -110,11 +112,7 @@
         NSGlobalDomain.KeyRepeat = 2;
       };
 
-      security.pam.enableSudoTouchIdAuth = true;
-
-      # Auto upgrade packages and daemon service
-      services.nix-daemon.enable = true;
-      # nix.package = pkgs.nix;
+      security.pam.services.sudo_local.touchIdAuth = true;
 
       # Necessary for using flakes on this system
       nix.settings.experimental-features = "nix-command flakes";
