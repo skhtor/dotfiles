@@ -57,6 +57,7 @@
           "balenaetcher"
           "discord"
           "obsidian"
+          "skype"
           "zen-browser"
         ];
         masApps = {
