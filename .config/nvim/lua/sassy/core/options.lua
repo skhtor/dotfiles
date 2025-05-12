@@ -46,6 +46,7 @@ opt.swapfile = false
 -- filetypes
 vim.filetype.add({
 	extension = {
+		config = "yaml",
 		hcl = "hcl",
 		tf = "terraform",
 		tfvars = "terraform",

@@ -21,13 +21,14 @@
         appcleaner
         arc-browser
         argocd
+        awscli2
+        awsebcli
         docker
         fzf
         gh
         git
         google-chrome
         helmfile
-        iterm2
         jq
         k9s
         kubectl
@@ -35,13 +36,16 @@
         mkalias
         neovim
         obsidian
+        postman
         ripgrep
+        shellcheck-minimal
         sops
         spotify
         stow
         tldr
         tmux
         watch
+        wget
         yamllint
         zoxide
         zsh-syntax-highlighting
@@ -55,10 +59,16 @@
         casks = [
           "1password"
           "balenaetcher"
+          "claude"
           "discord"
+          "docker"
           "ghostty"
+          "ledger-live"
+          "mongodb-compass"
           "obsidian"
+          "scratch"
           "skype"
+          "telegram"
           "zen-browser"
         ];
         masApps = {
