@@ -72,4 +72,3 @@ complete -o nospace -C /usr/local/bin/terragrunt terragrunt
 
 # Must be at end of .zshrc
 # See: https://github.com/zsh-users/zsh-syntax-highlighting?tab=readme-ov-file#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
-source /run/current-system/sw/share/zsh/plugins/nix/nix-zsh-completions.plugin.zsh

@@ -9,3 +9,5 @@ keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }
 
 keymap.set("n", "<leader>==", "<cmd>vertical resize +5<CR>", { desc = "Increase size of current split" })
 keymap.set("n", "<leader>--", "<cmd>vertical resize -5<CR>", { desc = "Decrease size of current split" })
+
+vim.api.nvim_set_keymap("v", "$", "g_", { noremap = true, silent = true })

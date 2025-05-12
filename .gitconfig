@@ -60,6 +60,7 @@
     spop = stash pop
     st = status
     subu = submodule update --remote --merge --init --recursive
+    set-upstream = "!git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD) $(git rev-parse --abbrev-ref HEAD)"
     unci = reset HEAD~
     unstage = reset HEAD --
 [pull]
