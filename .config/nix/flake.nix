@@ -41,9 +41,11 @@
         shellcheck-minimal
         sops
         spotify
+        ssm-session-manager-plugin
         stow
         tldr
         tmux
+        uv
         watch
         wget
         yamllint
