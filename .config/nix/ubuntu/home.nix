@@ -18,6 +18,7 @@
   home.homeDirectory = "/home/sassoonkuyumcian";  
 
   home.packages = with pkgs; [
+    _1password-cli
     awscli2
     docker
     fzf
@@ -37,6 +38,7 @@
     tmux
     watch
     wget
+    wl-clipboard
     zoxide
     zsh
   ];
