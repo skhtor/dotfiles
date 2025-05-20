@@ -36,9 +36,6 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"black", -- python formatter
-				"isort", -- python formatter
-				"pylint", -- python linter
 				"stylua", -- lua formatter
 				"tflint", -- terraform formatter
 			},
