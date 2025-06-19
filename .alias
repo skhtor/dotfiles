@@ -44,6 +44,7 @@ alias ssm='aws ssm start-session --target'
 
 # Kubectl
 alias k="kubectl"
+alias ka="k apply -f"
 alias kdash="kubectl -n addons describe secret \$(kubectl -n addons get secret | awk '/^admin-user-/{print \$1}') | awk '\$1==\"token:\"{print \$2}'"
 
 # Update Kubeconfig

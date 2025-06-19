@@ -1,2 +1,3 @@
 theme = catppuccin-mocha.conf
 font-feature=-calt
+window-decoration=none

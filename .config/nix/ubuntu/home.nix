@@ -20,25 +20,31 @@
   home.packages = with pkgs; [
     _1password-cli
     awscli2
+    cilium-cli
     docker
+    doctl
     fzf
     gccgo
     git
     gnumake
-    helm
     helmfile
     jq
     k9s
     kubectl
+    kubernetes-helm
     neovim
     nodejs
+    oha
     ripgrep
     stow
     terraform
+    terraform-docs
     tmux
+    traceroute
     watch
     wget
     wl-clipboard
+    yq
     zoxide
     zsh
   ];
