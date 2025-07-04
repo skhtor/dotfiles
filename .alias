@@ -51,3 +51,7 @@ alias kdash="kubectl -n addons describe secret \$(kubectl -n addons get secret |
 function kc {
   aws eks update-kubeconfig --name $1
 }
+
+tmux-cwd() {
+  tmux command-prompt -I "$PWD" -p "New session dir:" "attach -c %1"
+}
