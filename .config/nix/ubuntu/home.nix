@@ -44,6 +44,7 @@
     watch
     wget
     wl-clipboard
+    yarn
     yq
     zoxide
     zsh
