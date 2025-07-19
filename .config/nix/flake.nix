@@ -24,6 +24,7 @@
         awscli2
         awsebcli
         docker
+        ffmpeg
         fzf
         gh
         git
@@ -34,17 +35,23 @@
         kubectl
         kubernetes-helm
         mkalias
+        mpd
         neovim
+        nodejs
         obsidian
         postman
         ripgrep
+        rmpc
         shellcheck-minimal
         sops
         spotify
+        spotube
         ssm-session-manager-plugin
         stow
+        terraform
         tldr
         tmux
+        typescript
         uv
         watch
         wget
@@ -63,7 +70,7 @@
           "balenaetcher"
           "claude"
           "discord"
-          "docker"
+          "docker-desktop"
           "ghostty"
           "ledger-live"
           "mongodb-compass"
@@ -71,7 +78,7 @@
           "scratch"
           "skype"
           "telegram"
-          "zen-browser"
+          "zen"
         ];
         masApps = {
           "Yoink" = 457622435;
@@ -110,7 +117,7 @@
         dock.mru-spaces = false;
         dock.persistent-apps = [
           "${pkgs.arc-browser}/Applications/Arc.app"
-          "/Applications/Zen Browser.app"
+          "/Applications/Zen.app"
           "${pkgs.spotify}/Applications/Spotify.app"
           "/Applications/Ghostty.app"
           "${pkgs.obsidian}/Applications/Obsidian.app"
