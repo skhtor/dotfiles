@@ -67,3 +67,5 @@
     rebase = false
 [diff "sopsdiffer"]
     textconv = sops -d
+[init]
+	defaultBranch = main

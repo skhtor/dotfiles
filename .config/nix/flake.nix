@@ -6,9 +6,11 @@
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nixpkgs, nix-darwin, nix-homebrew }:
+  outputs = inputs@{ self, nixpkgs, nix-darwin, nix-homebrew, home-manager }:
   let
     configuration = { pkgs, config, ... }: {
       nixpkgs.config = {
@@ -156,18 +158,22 @@
     # Build darwin flake using:
     # darwin-rebuild build --flake .#simple
     darwinConfigurations."mbp" = nix-darwin.lib.darwinSystem {
-      modules = [ 
+      modules = [
         configuration
         nix-homebrew.darwinModules.nix-homebrew
         {
           nix-homebrew = {
             enable = true;
-
-            # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
             enableRosetta = true;
-
-            # User owning the Homebrew prefix
             user = "sassoonkuyumcian";
+          };
+        }
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          users.users.sassoonkuyumcian = {
+            home = import ./home.nix;
           };
         }
       ];
