@@ -28,6 +28,8 @@ return {
 					"dockerfile",
 					"gitignore",
 					"go",
+					"gotmpl",
+          "helm",
 					"hcl",
 					"json",
 					"lua",

@@ -1,1 +1,2 @@
 theme = catppuccin-mocha.conf
+font-feature = -calt, -liga, -dlig

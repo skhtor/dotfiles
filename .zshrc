@@ -15,6 +15,15 @@ export SSH_AUTH_SOCK="$XDG_CONFIG_HOME"/1Password/agent.sock
 # Eval
 eval "$(zoxide init --cmd cd zsh)"
 
+# Colours
+
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=selected-bg:#45475a \
+--color=border:#313244,label:#cdd6f4"
+
 # ~~~~~ Vi Mode ~~~~~ #
 
 bindkey -v
@@ -59,6 +68,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -v '^?' backward-delete-char
+bindkey '^R' history-incremental-search-backward
 
 # edit line in vim with ctrl-e
 autoload edit-command-line; zle -N edit-command-line
@@ -69,6 +79,7 @@ bindkey '^e' edit-command-line
 eval "$(op completion zsh)"; compdef _op op
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terragrunt terragrunt
+source <(fzf --zsh)
 
 # Must be at end of .zshrc
 # See: https://github.com/zsh-users/zsh-syntax-highlighting?tab=readme-ov-file#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
