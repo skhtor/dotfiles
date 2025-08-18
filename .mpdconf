@@ -1,0 +1,15 @@
+music_directory       "/Users/sassoonkuyumcian/Music/"
+playlist_directory    "/Users/sassoonkuyumcian/Music/playlists"
+db_file               "/Users/sassoonkuyumcian/Music/mpd/database"
+log_file              "/Users/sassoonkuyumcian/Music/mpd/mpd.log"
+pid_file              "/Users/sassoonkuyumcian/Music/mpd/mpd.pid"
+state_file            "/Users/sassoonkuyumcian/Music/mpd/mpdstate"
+
+audio_output {
+    type        "osx"
+    name        "My Output"
+    mixer_type  "software"
+}
+
+bind_to_address       "127.0.0.1"
+port                  "6600"
