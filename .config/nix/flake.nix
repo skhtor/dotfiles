@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.url = "github:nix-darwin/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url = "github:nix-community/home-manager";
@@ -15,7 +15,7 @@
     mkHost = { hostName, user, role }:
       nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        specialArgs = { inherit self; };  # Add this line to pass self
+        specialArgs = { inherit self user; };
         modules = [
           # Core nix-darwin plumbing
           ({ pkgs, ... }: {
@@ -62,37 +62,3 @@
     };
   };
 }
-
-# let
-#   configuration = { pkgs, config, ... }: {
-#     system.primaryUser = "sassoonkuyumcian";
-#   };
-# in
-# {
-#   # Build darwin flake using:
-#   # darwin-rebuild build --flake .#simple
-#   darwinConfigurations."mbp" = nix-darwin.lib.darwinSystem {
-#     modules = [
-#       configuration
-#       nix-homebrew.darwinModules.nix-homebrew
-#       {
-#         nix-homebrew = {
-#           enable = true;
-#           enableRosetta = true;
-#           user = "sassoonkuyumcian";
-#         };
-#       }
-#       home-manager.darwinModules.home-manager
-#       {
-#         home-manager.useGlobalPkgs = true;
-#         home-manager.useUserPackages = true;
-#         users.users.sassoonkuyumcian = {
-#           home = import ./home.nix;
-#         };
-#       }
-#     ];
-#   };
-#
-#   # Expose the package set, including overlays, for convenience
-#   darwinPackages = self.darwinConfigurations."mbp".pkgs;
-# };

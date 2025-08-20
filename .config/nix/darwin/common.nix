@@ -1,5 +1,7 @@
-{ self, pkgs, config, ... }:
+{ pkgs, config, user, self, ... }:
 {
+  system.primaryUser = "${user}";
+
   nixpkgs.config = {
     allowUnfree = true;
   };
@@ -7,7 +9,6 @@
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     _1password-cli
-    appcleaner
     argocd
     awscli2
     awsebcli
@@ -26,9 +27,7 @@
     mpd
     neovim
     nodejs
-    obsidian
     opentofu
-    postman
     ripgrep
     rmpc
     shellcheck-minimal
@@ -55,6 +54,7 @@
     ];
     casks = [
       "1password"
+      "appcleaner"
       "balenaetcher"
       "claude"
       "discord"
@@ -63,6 +63,7 @@
       "ledger-live"
       "mongodb-compass"
       "obsidian"
+      "postman"
       "scratch"
       "skype"
       "telegram"
@@ -103,15 +104,6 @@
   system.defaults = {
     dock.autohide = true;
     dock.mru-spaces = false;
-    dock.persistent-apps = [
-      "/Applications/Zen.app"
-      "${pkgs.spotify}/Applications/Spotify.app"
-      "/Applications/Ghostty.app"
-      "${pkgs.obsidian}/Applications/Obsidian.app"
-      "/System/Applications/Calendar.app"
-      "/System/Applications/App Store.app"
-      "/System/Applications/System Settings.app"
-    ];
     finder.AppleShowAllExtensions = true;
     finder.FXPreferredViewStyle = "clmv";
     loginwindow.GuestEnabled = false;
