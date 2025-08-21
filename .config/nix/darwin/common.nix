@@ -11,10 +11,7 @@
     _1password-cli
     argocd
     awscli2
-    awsebcli
     claude-code
-    docker
-    ffmpeg
     fzf
     gh
     git
@@ -24,16 +21,13 @@
     kubectl
     kubernetes-helm
     mkalias
-    mpd
     neovim
     nodejs
     opentofu
     ripgrep
-    rmpc
     shellcheck-minimal
     sops
     spotify
-    spotube
     ssm-session-manager-plugin
     stow
     tldr
@@ -55,18 +49,11 @@
     casks = [
       "1password"
       "appcleaner"
-      "balenaetcher"
       "claude"
-      "discord"
-      "docker-desktop"
       "ghostty"
-      "ledger-live"
-      "mongodb-compass"
       "obsidian"
-      "postman"
-      "scratch"
-      "skype"
-      "telegram"
+      "rectangle"
+      "spotify"
       "zen"
     ];
     masApps = {

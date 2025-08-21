@@ -1,11 +1,27 @@
 { pkgs, ... }:
 {
+  environment.systemPackages = with pkgs; [
+    ffmpeg
+    mpd
+    rmpc
+  ];
+
+  homebrew = {
+    casks = [
+      "balenaetcher"
+      "discord"
+      "ledger-live"
+      "scratch"
+      "telegram"
+    ];
+  };
+
   system.defaults = {
     dock.persistent-apps = [
       "/Applications/Zen.app"
-      "${pkgs.spotify}/Applications/Spotify.app"
+      "/Applications/Spotify.app"
       "/Applications/Ghostty.app"
-      "${pkgs.obsidian}/Applications/Obsidian.app"
+      "/Applications/Obsidian.app"
       "/System/Applications/Calendar.app"
       "/System/Applications/App Store.app"
       "/System/Applications/System Settings.app"

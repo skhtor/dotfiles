@@ -23,6 +23,7 @@
             users.users.${user}.home = "/Users/${user}";
             # Prevent macOS from clobbering paths
             environment.systemPackages = [];
+            nix.enable = false; # Prevent nix-darwin from managing nix installation
             nix.settings.experimental-features = [ "nix-command" "flakes" ];
           })
 
@@ -57,7 +58,7 @@
   in {
     darwinConfigurations = {
       # Adjust host names to match `scutil --get HostName` (or set HostName to these)
-      "tab"     = mkHost { hostName = "tab";     user = "kumuycians";       role = "tab"; };
+      "work"    = mkHost { hostName = "work";    user = "kumuycians";       role = "work"; };
       "megboog" = mkHost { hostName = "megboog"; user = "sassoonkuyumcian"; role = "megboog"; };
     };
   };
