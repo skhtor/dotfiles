@@ -3,11 +3,16 @@
   # Point to CA
   security.pki.certificateFiles = [ "/etc/ssl/certs/ca-certificates.crt" ];
 
+  environment.systemPackages = with pkgs; [
+    amazon-q-cli
+  ];
+
   homebrew = {
     casks = [
       "arc"
       "docker-desktop"
       "slack"
+      "vscodium"
       "zen@twilight"
     ];
   };

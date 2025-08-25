@@ -11,8 +11,8 @@ CVS
 _darcs
 \.hg
 
-\.git
-\.gitignore
+.git
+.gitignore
 
 \.DS_Store
 

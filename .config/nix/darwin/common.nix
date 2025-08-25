@@ -44,11 +44,13 @@
   homebrew = {
     enable = true;
     brews = [
+      "ca-certificates"
       "mas"
     ];
     casks = [
       "1password"
       "appcleaner"
+      "chatgpt"
       "claude"
       "ghostty"
       "obsidian"
