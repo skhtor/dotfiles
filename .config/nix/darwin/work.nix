@@ -1,10 +1,11 @@
 { pkgs, ... }:
 {
-  # Point to CA
-  security.pki.certificateFiles = [ "/etc/ssl/certs/ca-certificates.crt" ];
+  # Point to Zscaler Root CA
+  security.pki.certificateFiles = [ "/etc/ssl/certs/ZscalerRootCertificate-2048-SHA256.crt" ];
 
   environment.systemPackages = with pkgs; [
     amazon-q-cli
+    helm-docs
   ];
 
   homebrew = {
@@ -16,6 +17,7 @@
       "zen@twilight"
     ];
   };
+
   system.defaults = {
     dock.persistent-apps = [
       "/Applications/Spotify.app"

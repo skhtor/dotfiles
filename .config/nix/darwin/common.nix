@@ -52,6 +52,7 @@
       "appcleaner"
       "chatgpt"
       "claude"
+      "discord"
       "ghostty"
       "obsidian"
       "rectangle"
