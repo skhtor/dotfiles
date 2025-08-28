@@ -11,7 +11,6 @@
     _1password-cli
     argocd
     awscli2
-    claude-code
     fzf
     gh
     git
@@ -27,7 +26,6 @@
     ripgrep
     shellcheck-minimal
     sops
-    spotify
     ssm-session-manager-plugin
     stow
     tldr
@@ -49,10 +47,11 @@
     casks = [
       "1password"
       "appcleaner"
-      "claude"
+      "bluesnooze"
+      "vscodium"
       "ghostty"
+      "logi-options+"
       "obsidian"
-      "rectangle"
       "spotify"
       "zen"
     ];

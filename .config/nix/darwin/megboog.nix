@@ -8,11 +8,22 @@
 
   homebrew = {
     casks = [
+      "ableton-live-suite@11"
       "balenaetcher"
+      "clipgrab"
       "discord"
+      "foobar2000"
+      "jagex"
+      "kdenlive"
       "ledger-live"
-      "scratch"
+      "messenger"
+      "raycast"
+      "steam"
+      "tailscale"
+      "teamviewer"
       "telegram"
+      "thunderbird"
+      "tidal"
     ];
   };
 
