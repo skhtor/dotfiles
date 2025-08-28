@@ -42,6 +42,7 @@
   homebrew = {
     enable = true;
     brews = [
+      "ca-certificates"
       "mas"
     ];
     casks = [
@@ -49,6 +50,7 @@
       "appcleaner"
       "bluesnooze"
       "vscodium"
+      "discord"
       "ghostty"
       "logi-options+"
       "obsidian"

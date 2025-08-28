@@ -11,7 +11,6 @@
       "ableton-live-suite@11"
       "balenaetcher"
       "clipgrab"
-      "discord"
       "foobar2000"
       "jagex"
       "kdenlive"
