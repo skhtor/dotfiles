@@ -1,3 +1,7 @@
 .secret_env
 .secret_alias
 .config/tmux/plugins
+.config/argocd
+.config/helm
+.config/op
+.ssh/known_hosts*
