@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     amazon-q-cli
     helm-docs
+    terraform
   ];
 
   homebrew = {
@@ -23,9 +24,9 @@
       "/Applications/Spotify.app"
       "/Applications/Zen.app"
       "/Applications/Twilight.app"
+      "/Applications/Arc.app"
       "/Applications/Slack.app"
       "/Applications/Microsoft Outlook.app"
-      "/Applications/Arc.app"
       "/Applications/Ghostty.app"
       "/Applications/Microsoft Teams.app"
       "/Applications/Obsidian.app"

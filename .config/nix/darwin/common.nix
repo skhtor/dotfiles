@@ -54,7 +54,9 @@
       "ghostty"
       "logi-options+"
       "obsidian"
+      "raycast"
       "spotify"
+      "whatsapp"
       "zen"
     ];
     masApps = {
