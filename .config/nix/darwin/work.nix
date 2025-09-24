@@ -5,6 +5,7 @@
 
   environment.systemPackages = with pkgs; [
     amazon-q-cli
+    cilium-cli
     helm-docs
     terraform
   ];

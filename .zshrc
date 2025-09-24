@@ -14,6 +14,7 @@ export SSH_AUTH_SOCK="$XDG_CONFIG_HOME"/1Password/agent.sock
 
 # Eval
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(direnv hook zsh)"
 
 # ~~~~~ Vi Mode ~~~~~ #
 

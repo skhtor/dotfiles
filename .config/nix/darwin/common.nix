@@ -11,6 +11,7 @@
     _1password-cli
     argocd
     awscli2
+    direnv
     fzf
     gh
     git
