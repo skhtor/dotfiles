@@ -35,4 +35,4 @@ vault = "Work"
 vault = "Private"
 
 [[ssh-keys]]
-vault = "Unraid"
+vault = "Homelab"
