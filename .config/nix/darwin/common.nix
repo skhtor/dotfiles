@@ -21,6 +21,7 @@
     kubectl
     kubernetes-helm
     mkalias
+    mos
     neovim
     nodejs
     opentofu

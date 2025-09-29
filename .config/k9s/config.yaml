@@ -1,6 +1,6 @@
 # Global skin is specified
 k9s:
-  liveViewAutoRefresh: false
+  liveViewAutoRefresh: true
   refreshRate: 2
   maxConnRetry: 5
   readOnly: false

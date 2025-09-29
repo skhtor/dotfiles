@@ -1,5 +1,9 @@
 local opt = vim.opt -- for conciseness
 
+-- mouse scroll
+opt.mouse = "a"
+opt.mousescroll = "ver:1,hor:1"
+
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
