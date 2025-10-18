@@ -40,7 +40,7 @@ alias pip_upgrade_all='pip list --outdated --format=freeze | grep -v '^\-e' | cu
 # SSM
 alias ssm='aws ssm start-session --target'
 
-#### AWS ADFS
+alias q='amazon-q chat --trust-tools @kubernetes/configuration_view,@kubernetes/kubernetes,@kubernetes/helm_list,@kubernetes/namespaces_list,@kubernetes/pods_get,@kubernetes/pods_list,@kubernetes/pods_log,@kubernetes/pods_list_in_namespace,@kubernetes/resources_get,@kubernetes/resources_list,@kubernetes/pods_top/@kubernetes/events_list'
 
 # Kubectl
 alias k="kubectl"

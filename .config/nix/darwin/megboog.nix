@@ -4,7 +4,6 @@
     age
     amazon-q-cli
     ffmpeg
-    mpd
     rmpc
     sketchybar
   ];
