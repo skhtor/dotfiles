@@ -44,7 +44,6 @@
   homebrew = {
     enable = true;
     brews = [
-      "ca-certificates"
       "mas"
     ];
     casks = [

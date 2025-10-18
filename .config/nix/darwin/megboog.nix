@@ -1,9 +1,12 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    age
+    amazon-q-cli
     ffmpeg
     mpd
     rmpc
+    sketchybar
   ];
 
   homebrew = {
@@ -12,13 +15,13 @@
       "balenaetcher"
       "clipgrab"
       "foobar2000"
+      "google-chrome"
       "jagex"
       "kdenlive"
       "ledger-live"
       "messenger"
       "raycast"
       "steam"
-      "tailscale"
       "teamviewer"
       "telegram"
       "thunderbird"
@@ -33,7 +36,6 @@
       "/Applications/Ghostty.app"
       "/Applications/Obsidian.app"
       "/System/Applications/Calendar.app"
-      "/System/Applications/App Store.app"
       "/System/Applications/System Settings.app"
     ];
   };

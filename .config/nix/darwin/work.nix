@@ -7,6 +7,7 @@
     amazon-q-cli
     cilium-cli
     helm-docs
+    nodejs_24
     terraform
   ];
 
