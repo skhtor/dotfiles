@@ -5,15 +5,24 @@
 
   environment.systemPackages = with pkgs; [
     amazon-q-cli
+    bunster
     cilium-cli
     helm-docs
     nodejs_24
+    linkerd_edge
     terraform
   ];
 
   homebrew = {
+    brews = [
+    ];
+    taps = [
+      "deskflow/homebrew-tap"
+    ];
     casks = [
       "arc"
+      "cursor"
+      "deskflow"
       "docker-desktop"
       "slack"
       "vscodium"

@@ -50,14 +50,15 @@
       "1password"
       "appcleaner"
       "bluesnooze"
-      "vscodium"
       "discord"
       "ghostty"
       "logi-options+"
       "obsidian"
       "raycast"
       "spotify"
+      "telegram"
       "whatsapp"
+      "visual-studio-code"
       "zen"
     ];
     masApps = {

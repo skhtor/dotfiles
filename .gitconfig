@@ -64,7 +64,7 @@
     unci = reset HEAD~
     unstage = reset HEAD --
 [pull]
-    rebase = false
+    rebase = true
 [diff "sopsdiffer"]
     textconv = sops -d
 [init]
