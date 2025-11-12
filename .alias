@@ -40,7 +40,10 @@ alias pip_upgrade_all='pip list --outdated --format=freeze | grep -v '^\-e' | cu
 # SSM
 alias ssm='aws ssm start-session --target'
 
-alias q='amazon-q chat --trust-tools @kubernetes/configuration_view,@kubernetes/kubernetes,@kubernetes/helm_list,@kubernetes/namespaces_list,@kubernetes/pods_get,@kubernetes/pods_list,@kubernetes/pods_log,@kubernetes/pods_list_in_namespace,@kubernetes/resources_get,@kubernetes/resources_list,@kubernetes/pods_top/@kubernetes/events_list'
+alias q='amazon-q chat \
+          --trust-tools @k8s/configuration_view,@k8s/events_list,@k8s/helm_list,@k8s/namespaces_list,@k8s/pods_get,@k8s/pods_list,@k8s/pods_list_in_namespace,@k8s/pods_log,@k8s/pods_top,@k8s/resources_get,@k8s/resources_list \
+          --trust-tools @n8n/get_database_statistics,@n8n/get_node_as_tool_info,@n8n/get_node_documentation,@n8n/get_node_essentials,@n8n/get_node_info,@n8n/get_property_dependencies,@n8n/get_template,@n8n/get_templates_for_task,@n8n/list_ai_tools,@n8n/list_node_templates,@n8n/list_nodes,@n8n/list_tasks,@n8n/list_templates,@n8n/n8n_diagnostic,@n8n/n8n_get_execution,@n8n/n8n_get_workflow,@n8n/n8n_get_workflow_details,@n8n/n8n_get_workflow_minimal,@n8n/n8n_get_workflow_structure,@n8n/n8n_health_check,@n8n/n8n_list_available_tools,@n8n/n8n_list_executions,@n8n/n8n_list_workflows,@n8n/n8n_validate_workflow,@n8n/n8n_workflow_versions,@n8n/search_node_properties,@n8n/search_nodes,@n8n/search_templates,@n8n/search_templates_by_metadata,@n8n/tools_documentation,@n8n/validate_node_minimal,@n8n/validate_node_operation,@n8n/validate_workflow,@n8n/validate_workflow_connections,@n8n/validate_workflow_expressions \
+          --trust-tools @nocodb/countRecords,@nocodb/getBaseInfo,@nocodb/getRecord,@nocodb/getTableSchema,@nocodb/getTablesList,@nocodb/queryRecords,@nocodb/readAttachment'
 
 # Kubectl
 alias k="kubectl"
