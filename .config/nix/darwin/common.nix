@@ -10,16 +10,21 @@
   environment.systemPackages = with pkgs; [
     _1password-cli
     argocd
+    ast-grep
     awscli2
     direnv
+    fd
     fzf
     gh
     git
     helmfile
+    imagemagick
     jq
     k9s
     kubectl
     kubernetes-helm
+    lazygit
+    mermaid-cli
     mkalias
     mos
     neovim
@@ -53,6 +58,7 @@
       "discord"
       "docker-desktop"
       "ghostty"
+      "kiro-cli"
       "logi-options+"
       "obsidian"
       "raycast"
@@ -79,7 +85,7 @@
     env = pkgs.buildEnv {
       name = "system-applications";
       paths = config.environment.systemPackages;
-      pathsToLink = "/Applications";
+      pathsToLink = [ "/Applications" ];
     };
   in
     pkgs.lib.mkForce ''

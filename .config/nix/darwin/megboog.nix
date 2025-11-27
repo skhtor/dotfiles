@@ -2,7 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     age
-    amazon-q-cli
     ffmpeg
     rmpc
     sketchybar

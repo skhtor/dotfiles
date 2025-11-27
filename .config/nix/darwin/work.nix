@@ -4,12 +4,11 @@
   security.pki.certificateFiles = [ "/etc/ssl/certs/ZscalerRootCertificate-2048-SHA256.crt" ];
 
   environment.systemPackages = with pkgs; [
-    amazon-q-cli
     bunster
     cilium-cli
     helm-docs
-    nodejs_24
     linkerd_edge
+    nodejs_24
     terraform
   ];
 
@@ -24,6 +23,7 @@
       "cursor"
       "deskflow"
       "docker-desktop"
+      "freelens"
       "slack"
       "vscodium"
       "zen@twilight"
