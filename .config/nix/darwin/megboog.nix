@@ -16,7 +16,7 @@
       "google-chrome"
       "jagex"
       "kdenlive"
-      "ledger-live"
+      "ledger-wallet"
       "messenger"
       "raycast"
       "steam"
