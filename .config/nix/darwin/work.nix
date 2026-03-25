@@ -3,6 +3,11 @@
   # Point to Zscaler Root CA
   security.pki.certificateFiles = [ "/etc/ssl/certs/ZscalerRootCertificate-2048-SHA256.crt" ];
 
+  environment.variables = {
+    NIX_SSL_CERT_FILE = "/etc/ssl/certs/ca-certificates.crt";
+    SSL_CERT_FILE = "/etc/ssl/certs/ca-certificates.crt";
+  };
+
   environment.systemPackages = with pkgs; [
     bunster
     cilium-cli

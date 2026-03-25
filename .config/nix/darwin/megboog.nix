@@ -21,6 +21,7 @@
       "raycast"
       "steam"
       "teamviewer"
+      "telegram"
       "thunderbird"
       "tidal"
     ];
