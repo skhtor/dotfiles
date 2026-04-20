@@ -56,6 +56,5 @@ vim.filetype.add({
     tfvars = "terraform",
     tfstate = "json",
     gotmpl = "helm",
-    yaml = "helm",
-	},
+  },
 })
