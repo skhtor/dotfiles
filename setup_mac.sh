@@ -1,24 +1,28 @@
 #!/bin/zsh
 set -e
 
-xcode-select --install
+# Install Xcode CLI tools
+xcode-select --install 2>/dev/null || true
 
-which -s brew
-if [[ $? != 0 ]] ; then
-    echo "Installing Homebrew"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# Install Homebrew
+if ! command -v brew &>/dev/null; then
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-echo "Running brew update and upgrade"
-brew update
-brew upgrade
+# Install packages from Brewfile
+echo "Installing packages..."
+brew bundle --file=~/dotfiles/Brewfile
 
-echo "Install from leaves.txt and casks.txt"
-xargs brew install < leaves.txt
-xargs brew install --cask < casks.txt
+# Symlink dotfiles
+echo "Linking dotfiles..."
+cd ~/dotfiles && stow .
 
-echo "Running brew cleanup"
-brew cleanup
+# Install Tmux TPM
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+    echo "Installing Tmux TPM..."
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
 
-echo "Running brew doctor"
-brew doctor
+echo "Done!"

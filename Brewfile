@@ -1,0 +1,98 @@
+# ── Common (all machines) ─────────────────────────────────────────────
+
+# CLI tools
+brew "argocd"
+brew "ast-grep"
+brew "awscli"
+brew "direnv"
+brew "fd"
+brew "fzf"
+brew "gh"
+brew "git"
+brew "helmfile"
+brew "imagemagick"
+brew "jq"
+brew "k9s"
+brew "kubectl"
+brew "helm"
+brew "lazygit"
+brew "mermaid-cli"
+brew "mas"
+brew "neovim"
+brew "node"
+brew "opentofu"
+brew "ripgrep"
+brew "shellcheck"
+brew "sops"
+brew "stow"
+brew "tldr"
+brew "tmux"
+brew "typescript"
+brew "uv"
+brew "watch"
+brew "wget"
+brew "yamllint"
+brew "zoxide"
+brew "zsh-syntax-highlighting"
+
+# Fonts
+cask "font-jetbrains-mono-nerd-font"
+
+# Apps (common)
+cask "1password"
+cask "appcleaner"
+cask "bluesnooze"
+cask "discord"
+cask "docker-desktop"
+cask "ghostty"
+cask "kiro"
+cask "kiro-cli"
+cask "logi-options-plus"
+cask "obsidian"
+cask "raycast"
+cask "spotify"
+cask "visual-studio-code"
+cask "vscodium"
+cask "whatsapp"
+cask "zen"
+
+# Mac App Store
+mas "Yoink", id: 457622435
+
+# ── Personal (megboog) ────────────────────────────────────────────────
+# Uncomment these on your personal machine
+
+# brew "age"
+# brew "ffmpeg"
+# brew "rmpc"
+# brew "sketchybar"
+# cask "ableton-live-suite@11"
+# cask "balenaetcher"
+# cask "clipgrab"
+# cask "foobar2000"
+# cask "google-chrome"
+# cask "jagex"
+# cask "kdenlive"
+# cask "ledger-wallet"
+# cask "messenger"
+# cask "steam"
+# cask "teamviewer"
+# cask "telegram"
+# cask "thunderbird"
+# cask "tidal"
+
+# ── Work ──────────────────────────────────────────────────────────────
+# Uncomment these on your work machine
+
+# brew "cilium-cli"
+# brew "helm-docs"
+# brew "linkerd"
+# brew "node@24"
+# brew "terraform"
+# tap "deskflow/homebrew-tap"
+# cask "arc"
+# cask "cursor"
+# cask "deskflow"
+# cask "freelens"
+# cask "slack"
+# cask "zen@twilight"
