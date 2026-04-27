@@ -1,6 +1,6 @@
 # Exports
 export XDG_CONFIG_HOME="$HOME"/.config
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="/opt/homebrew/bin:$HOME/.local/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export SSH_AUTH_SOCK="$XDG_CONFIG_HOME"/1Password/agent.sock
 
