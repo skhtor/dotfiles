@@ -1,8 +1,11 @@
-# Exports
+# Exportxs
 export XDG_CONFIG_HOME="$HOME"/.config
 export PATH="/opt/homebrew/bin:$HOME/.local/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export SSH_AUTH_SOCK="$XDG_CONFIG_HOME"/1Password/agent.sock
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # Source
 [ -f ~/.alias ]        && source ~/.alias
@@ -11,7 +14,6 @@ export SSH_AUTH_SOCK="$XDG_CONFIG_HOME"/1Password/agent.sock
 [ -f ~/.secret_env ]   && source ~/.secret_env
 
 [ -f ~/.config/zsh/git-prompt.zsh ] && source ~/.config/zsh/git-prompt.zsh
-[ -f ~/.config/zsh/.fzf.zsh ]       && source ~/.config/zsh/.fzf.zsh
 
 # Eval
 eval "$(zoxide init --cmd cd zsh)"
@@ -42,6 +44,19 @@ zle-line-init() {
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+precmd_functions+=(_aws_rprompt)
+function _aws_rprompt() {
+  if [[ -n "$AWS_PROFILE" ]]; then
+    if [[ "$AWS_PROFILE_COLOR" == "red" ]]; then
+      RPROMPT="%F{red}AWS: ${AWS_PROFILE}%f"
+    else
+      RPROMPT="%F{green}AWS: ${AWS_PROFILE}%f"
+    fi
+  else
+    RPROMPT=""
+  fi
+}
 
 # Auto/tab complete
 autoload -U compinit
